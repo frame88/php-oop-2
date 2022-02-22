@@ -22,5 +22,8 @@ $scooter_2 = new Scooter('honda','ef89213');
 var_dump($scooter_1, $scooter_2);
 
 $user = new User('Enzo', 58, 10298);
+var_dump($user->getScore());
+var_dump($user->getSale());
 
 ?>
+
