@@ -7,8 +7,8 @@ class User {
     protected $age;
     protected $payment;
     protected $punti;
-}
 
+    
 public function __construct($name, $age, $punti)
 {
     //dati obbligatori per la creazione di un nuovo oggetto user
@@ -70,5 +70,7 @@ public function setPunti($punti)
 {
     $this->punti = $punti;
     return $this;
+}
+
 }
 ?>

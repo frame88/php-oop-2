@@ -7,7 +7,7 @@ class Scooter {
     protected $displacement;    //cilindrata
     protected $hp;  //cavalli
     protected $productionyear;   //anno di produzione
-}
+
 
 public function __construct($brand, $plate)
 {
@@ -56,8 +56,5 @@ public function setProductionyear($productionyear){
     $this->productionyear = $productionyear;
     return $this;
 }
-
-
-
-
+}
 ?>
