@@ -6,15 +6,15 @@ class User {
     protected $lastname;
     protected $age;
     protected $payment;
-    protected $punti;
+    protected $score;
 
     
-public function __construct($name, $age, $punti)
+public function __construct($name, $age, $score)
 {
     //dati obbligatori per la creazione di un nuovo oggetto user
     $this->setName($name);
     $this->setAge($age);
-    $this->setPunti($punti);
+    $this->setScore($score);
 }
 
 //get   return $this->esempio;
@@ -62,15 +62,24 @@ public function setPayment($payment)
     return $this;
 }
 
-public function getPunti()
-{
-    return $this->punti;
-}
-public function setPunti($punti)
-{
-    $this->punti = $punti;
-    return $this;
-}
+    public function getScore() {
+        return $this->score;
+    }
+    public function setScore($score) {
+        if ($score < 5000) {
+            $this->sale = 5;
+            $this->score += 50;
+        }
+        else if ($score < 10000 && $score > 5000) {
+            $this->sale = 10;
+            $this->score += 100;
+        }
+        else if ($score > 10000) {
+            $this->sale = 20;
+            $this->score += 150;
+        }
+        return $this;
+    }
 
 }
 ?>
