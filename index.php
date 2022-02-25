@@ -15,14 +15,22 @@
 
 require_once __DIR__ . '/classes/Product.php';
 require_once __DIR__ . '/classes/User.php';
+require_once __DIR__ . '/traits/MotoAttribute.php';
+require_once __DIR__ . '/classes/Moto_1_Guzzi.php';
+require_once __DIR__ . '/classes/Moto_2_Kawasaki.php';
 
 try {
-    $product = new Product('Superleggera', 120000, 'DucAti');
+    $product = new Product('Superleggera', 12000, 'DucAti');
     $product->setDescription('500 esemplari in circolazione, 100kg, 160hp');
     echo $product->getName();
 } catch (\Exception $e) {
     echo $e->getMessage();
 }
-$product->setType('MotorSport');
+
 var_dump($product);
+
+$Moto_1_Guzzi = new Moto_1_Guzzi ('California1200', 16000, 'Moto Guzzi');
+var_dump($Moto_1_Guzzi);
+$Moto_1_Guzzi->setKeyless('Bluetooth');
+
 ?>

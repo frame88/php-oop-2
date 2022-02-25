@@ -60,9 +60,9 @@ class Product
      */ 
     public function setPrice(float $price)
     {
-        if($price < 99000)
+        if($price < 5000)
         {
-            throw new Exception("Credito insufficiente");
+            throw new Exception("Non abbiamo moto in catalogo che costano cosi poco , dev'esserci un errore");
         }
         $this->price = $price;
 

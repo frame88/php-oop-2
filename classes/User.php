@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/Product.php';
 
-class User extends Product
+class User 
 {
     protected $userName;
     protected $userSurname;
